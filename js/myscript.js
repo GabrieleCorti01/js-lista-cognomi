@@ -1,23 +1,29 @@
 
-// chiedi all’utente il cognome
-// inseriscilo in un array con altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’
-// stampa la lista ordinata alfabeticamente
-// scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
+let cognomeUtente = prompt("Quale è il tuo cognome?");
+let listaCognomi = ["Rossi", "Bianchi", "Neri", "Gialli"];
 
-// const cognomi = ["Rossi", "Neri", "Blu","Verde","Bianco"];
-// var cognomeUtente = prompt("Inserisci il tuo cognome!");
-// cognomi.push(cognomeUtente)
-// console.log(cognomi.sort())
+listaCognomi.push(cognomeUtente);
 
-const cognomi = ["Rossi", "Neri", "Blu","Verde","Bianco"];
-var cognomeUtente = prompt("Inserisci il tuo cognome!");
-
-for (let i = 0; i < 6; i++) {
-  let listaCognomi = console.log(cognomi [i]);
-  cognomi.push(cognomeUtente)
-
-  console.log(cognomi.sort() [i])
+for (let i = 0; i < listaCognomi.length; i++){
+    if (listaCognomi[i].charAt(0).toUpperCase() != listaCognomi[i].charAt(0) )
+    listaCognomi[i] = listaCognomi[i].charAt(0).toUpperCase() + listaCognomi[i].slice(1);
 }
+
+if (cognomeUtente.charAt(0).toUpperCase() != cognomeUtente.charAt(0) ){
+    cognomeUtente = cognomeUtente.charAt(0).toUpperCase( + cognomeUtente.slice(1))
+}
+
+let listaCognomiOrdinata = listaCognomi.sort();
+
+console.log("Ecco la lista ordinata:" + listaCognomi)
+for (let j = 0; j < listaCognomiOrdinata; j++){
+    console.log(nuovaListaCognomi[j]);
+}
+
+
+let posizioneCognome = listaCognomiOrdinata.indexOf(cognomeUtente) + 1;
+console.log("Il cognome inserito  è in posizione " + posizioneCognome + ".")
+
 
 
 
